@@ -1,0 +1,96 @@
+name: particle_image_velocimetry
+version_number: 1
+institution: Karlsruhe Institute of Technology
+contact: https://orcid.org/0000-0001-8729-0482
+valid_characters: ''
+pattern: ''
+last_modified: 2023-05-24_08:22:15
+---
+table:
+  final_interrogation_window_size:
+    alias: interrogation_window_size
+    canonical_units: pixel
+    description: Size of the final PIV interogation window.
+  image_particle_density:
+    canonical_units: 1/pixel
+    description: Number of particle images per pixel. Equals the number of particles
+      divided by the image area.
+  image_particle_diameter:
+    canonical_units: pixel
+    description: The diameter of an image particle.
+  inplane_velocity:
+    canonical_units: m/s
+    description: Velocity is a vector quantity. Without a prefix "x", "y" or "z" it
+      indicates the magnitute of the velocity vector. "inplane" indicates that the
+      velocity magnitude was computed based on the in-plane components only.
+  laser_sheet_thickness:
+    canonical_units: m
+    description: The width of the laser beam illuminating the seeding particles.
+  mean_image_particle_diameter:
+    alias: mean_image_particle_size
+    canonical_units: pixel
+    description: The mean particle diameter in the field of interest.
+  number_of_particles:
+    canonical_units: ''
+    description: Number of seeding particles in the image or field of interest.
+  piv_recording:
+    canonical_units: count
+    description: The raw unprocessed PIV image as recorded by the used camera.
+  pulse_delay:
+    canonical_units: s
+    description: Time between two laser pulses.
+  saturated_pixel_number:
+    canonical_units: ''
+    description: Number of pixels in the field of interest that exceed the maximal
+      senor count.
+  standard_deviation_of_image_particle_diameter:
+    alias: standard_deviation_of_image_particle_size
+    canonical_units: pixel
+    description: The standard deviation of the image particle diameter in the field
+      of interest.
+  time:
+    canonical_units: s
+    description: Recording time since start of recording.
+  velocity:
+    canonical_units: m/s
+    description: Velocity is a vector quantity. Without a prefix "x", "y" or "z" it
+      indicates the magnitute of the velocity vector. The magnitude is computed based
+      on all velocity components.
+  x_coordinate:
+    canonical_units: m
+    description: Coordinate in x axis direction.
+  x_pixel_coordinate:
+    canonical_units: pixel
+    description: Image coordinate in horizontal direction.
+  x_pixel_origin:
+    canonical_units: pixel
+    description: The pixel x (horizontal) location of the origin used for PIV evaluation
+  x_velocity:
+    canonical_units: m/s
+    description: Velocity is a vector quantity. X indicates the component in x-axis
+      direction. This component is an in-plane component.
+  y_coordinate:
+    canonical_units: m
+    description: Coordinate in y axis direction.
+  y_pixel_coordinate:
+    canonical_units: pixel
+    description: Image coordinate in vertical direction.
+  y_pixel_origin:
+    canonical_units: pixel
+    description: The pixel y (vertical) location of the origin used for PIV evaluation
+  y_velocity:
+    canonical_units: m/s
+    description: Velocity is a vector quantity. Y indicates the component in y-axis
+      direction. This component is an in-plane component.
+  z_coordinate:
+    canonical_units: m
+    description: Coordinate in z axis direction.
+  z_mean_velocity:
+    canonical_units: m/s
+    description: Velocity is a vector quantity. Z indicates the component in z-axis
+      direction. Mean indicates that the average over all timesteps was taken. This
+      component is an in-plane component.
+  z_velocity:
+    canonical_units: m/s
+    description: Velocity is a vector quantity. Z indicates the component in z-axis
+      direction. This component is the out-of-plane component.
