@@ -7,13 +7,14 @@ It holds
 """
 
 import json
+from typing import Dict
+
 from h5rdmtoolbox._config import ureg
 from h5rdmtoolbox.conventions.layout import Layout
 from h5rdmtoolbox.conventions.layout.tbx import IsValidContact
-from h5rdmtoolbox.conventions.layout.validators import In
+from h5rdmtoolbox.conventions.layout.validators import In, Equal
 from h5rdmtoolbox.conventions.layout.validators import Validator, ValidString, Regex
 from h5rdmtoolbox.conventions.standard_name import is_valid_unit
-from typing import Dict
 
 
 class IsValidUnit(Validator):
@@ -140,6 +141,18 @@ def create_piv_layout():
     any_ds.specify_attrs(dict(standard_name='piv_flags',
                               units=In('', ' '),
                               flag_meaning=ValidFlagMeanings(FLAGS)), count=1)
+
+    # TODO: This does not work correctly:
+    any_group = lay['*']
+    any_dataset = any_group.specify_dataset(name=..., opt=True)
+    any_dataset.specify_attrs(dict(standard_name='x_final_interrogation_window_size',
+                                   units=Equal('pixel')), count=1)
+    any_dataset.specify_attrs(dict(standard_name='y_final_interrogation_window_size',
+                                   units=Equal('pixel')), count=1)
+    any_dataset.specify_attrs(dict(standard_name='x_final_interrogation_window_overlap_size',
+                                   units=Equal('pixel')), count=1)
+    any_dataset.specify_attrs(dict(standard_name='y_final_interrogation_window_overlap_size',
+                                   units=Equal('pixel')), count=1)
     return lay
 
 

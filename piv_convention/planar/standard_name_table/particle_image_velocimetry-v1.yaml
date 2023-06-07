@@ -33,6 +33,12 @@ table:
   number_of_particles:
     canonical_units: ''
     description: Number of seeding particles in the image or field of interest.
+  piv_seeding_material:
+    canonical_units: ''
+    description: The type of particles used for seeding the flow, e.g. Di-ethyl-hexyl-sebacate (DEHS).
+  piv_mean_seeding_particle_size:
+    canonical_units: um
+    description: The mean diameter of the seeding particles.
   piv_recording:
     canonical_units: count
     description: The raw unprocessed PIV image as recorded by the used camera.
