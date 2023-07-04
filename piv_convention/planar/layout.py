@@ -9,7 +9,7 @@ It holds
 import json
 from typing import Dict
 
-from h5rdmtoolbox._config import ureg
+from h5rdmtoolbox import get_ureg
 from h5rdmtoolbox.conventions.layout import Layout
 from h5rdmtoolbox.conventions.layout.tbx import IsValidContact
 from h5rdmtoolbox.conventions.layout.validators import In, Equal
@@ -103,7 +103,7 @@ class IsSIUnit(Validator):
         is_unit = is_valid_unit(value)
         if not is_unit:
             return False
-        return ureg.Unit(value).is_compatible_with(self.reference)
+        return get_ureg().Unit(value).is_compatible_with(self.reference)
 
 
 def create_piv_layout():
