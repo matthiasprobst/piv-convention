@@ -4,7 +4,7 @@ institution: Karlsruhe Institute of Technology
 contact: https://orcid.org/0000-0001-8729-0482
 valid_characters: ''
 pattern: ''
-last_modified: 2023-05-24_08:22:15
+last_modified: 2023-07-05_08:45:13
 ---
 table:
   final_interrogation_window_size:
@@ -33,15 +33,16 @@ table:
   number_of_particles:
     canonical_units: ''
     description: Number of seeding particles in the image or field of interest.
-  piv_seeding_material:
-    canonical_units: ''
-    description: The type of particles used for seeding the flow, e.g. Di-ethyl-hexyl-sebacate (DEHS).
   piv_mean_seeding_particle_size:
     canonical_units: um
     description: The mean diameter of the seeding particles.
   piv_recording:
     canonical_units: count
     description: The raw unprocessed PIV image as recorded by the used camera.
+  piv_seeding_material:
+    canonical_units: ''
+    description: The type of particles used for seeding the flow, e.g. Di-ethyl-hexyl-sebacate
+      (DEHS).
   pulse_delay:
     canonical_units: s
     description: Time between two laser pulses.
@@ -65,6 +66,11 @@ table:
   x_coordinate:
     canonical_units: m
     description: Coordinate in x axis direction.
+  x_moving_frame_velocity:
+    canonical_units: m/s
+    description: Moving frame velocity is a vector quantity. X indicates the component
+      in x-axis direction. This component is an in-plane component. The velocity depicts
+      the velocity of the moving frame relative to the stationary frame.
   x_pixel_coordinate:
     canonical_units: pixel
     description: Image coordinate in horizontal direction.
@@ -78,6 +84,11 @@ table:
   y_coordinate:
     canonical_units: m
     description: Coordinate in y axis direction.
+  y_moving_frame_velocity:
+    canonical_units: m/s
+    description: Moving frame velocity is a vector quantity. Y indicates the component
+      in y-axis direction. This component is an in-plane component. The velocity depicts
+      the velocity of the moving frame relative to the stationary frame.
   y_pixel_coordinate:
     canonical_units: pixel
     description: Image coordinate in vertical direction.
